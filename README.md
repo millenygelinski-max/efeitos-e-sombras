@@ -1,9 +1,27 @@
-# ⚡ TechVibe Portal - Feed Dinâmico & Vibrante
+# 🚀 Desafio: Cards Interativos com Hover e Dark Mode
 
-Projeto desenvolvido para demonstrar o uso avançado de **CSS3**, animações com `:hover`, suporte a **Modo Escuro com sombras bioluminescentes** e filtragem dinâmica via **JavaScript**.
+Este projeto é uma demonstração prática do uso de seletores CSS, efeitos de escala com `transform`, manipulação de sombras com `box-shadow` e suporte a **Modo Escuro (Dark Mode)**.
 
-## 🎯 Desafio Cumprido
-- **Aumento de Tamanho no Hover**: Aplicado `transform: scale(1.02)` com curva suave de transição (`cubic-bezier`).
-- **Sombra Intensificada**: Sombra expandida e rica em tom violeta no modo claro.
-- **Sombra bioluminescente no Modo Escuro**: Ajustada para tons brilhantes em Cyan e Purple (`rgba(6, 182, 212, 0.45)`), garantindo efeito de profundidade.
-- **Conteúdo Extenso**: Vários artigos completos com função para expandir/recolher texto.
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5**: Estrutura semântica com a tag `<article>`.
+- **CSS3**: Transições, efeitos de hover, variáveis e `@media (prefers-color-scheme)`.
+- **JavaScript**: Alternância manual de tema claro/escuro via classe CSS.
+
+## 🎯 Recursos Implementados
+
+1. **Efeito Hover nos Cards (`article:hover`)**:
+   - Aumento leve do tamanho do card com `transform: scale(1.02)`.
+   - Intensificação da sombra para criar efeito de elevação.
+   - Transição suave usando `transition`.
+
+2. **Suporte a Dark Mode**:
+   - Ajuste automático conforme as preferências do sistema operacional.
+   - Suporte a alternância manual via botão.
+   - Sombra com brilho azulado (`rgba(0, 191, 255, 0.35)`) para destacar os cards em fundos escuros.
+
+## 📂 Como Executar
+
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
