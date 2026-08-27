@@ -3,26 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed de Postagens</title>
+  <title>Portal Dev - Artigos e Tutoriais</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Meu Feed Dev</h1>
-    <button id="theme-toggle">Alternar Modo</button>
+    <div class="header-container">
+      <h1>Meu Feed Dev 🚀</h1>
+      <button id="theme-toggle">Alternar Modo</button>
+    </div>
   </header>
+
+  <section class="hero">
+    <h2>Explorando o Futuro do Desenvolvimento Front-End</h2>
+    <p>Confira nossos artigos mais recentes sobre CSS moderno, arquitetura de software, acessibilidade e interatividade na web.</p>
+  </section>
 
   <main class="container">
     <article class="card">
-      <h2>Efeitos com CSS :hover</h2>
-      <p>Aprenda a criar animações suaves e efeitos de profundidade com transform scale e box-shadow no seu projeto.</p>
+      <div class="card-tag">CSS3 & Design</div>
+      <h2>Dominando Efeitos de Hover e Transições Suaves</h2>
+      <p class="author">Por <strong>Ana Silva</strong> • 27 de Agosto, 2026</p>
+      <p class="excerpt">
+        A experiência do usuário depende diretamente dos detalhes visuais. Aprenda como aplicar seletores pseudoclasse como <code>:hover</code> junto com a propriedade <code>transform: scale()</code> para dar a sensação de elevação e dinamismo às suas interfaces.
+      </p>
+      <p class="excerpt">
+        Neste tutorial completo, analisamos também como manipular a propriedade <code>box-shadow</code> para simular fontes de luz realistas, tornando seus elementos interativos muito mais atraentes.
+      </p>
+      <div class="card-footer">
+        <span class="read-time">⏱️ 5 min de leitura</span>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </div>
     </article>
 
     <article class="card">
-      <h2>Desenvolvimento Web Moderno</h2>
-      <p>Construindo interfaces dinâmicas, responsivas e estilizadas utilizando as melhores práticas de HTML e CSS.</p>
+      <div class="card-tag">Arquitetura Web</div>
+      <h2>Boas Práticas de HTML Semântico e Acessibilidade</h2>
+      <p class="author">Por <strong>Carlos Eduardo</strong> • 25 de Agosto, 2026</p>
+      <p class="excerpt">
+        Construir sites modernos vai muito além da aparência. Garantir que a sua estrutura HTML utilize as tags corretas — como <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> e <code>&lt;header&gt;</code> — é fundamental para SEO e para leitoras de tela.
+      </p>
+      <p class="excerpt">
+        Entenda o impacto do contraste de cores entre o fundo e os textos, e veja estratégias para adaptar o seu CSS quando os usuários utilizam preferências de alto contraste ou temas escuros nativos.
+      </p>
+      <div class="card-footer">
+        <span class="read-time">⏱️ 8 min de leitura</span>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </div>
     </article>
 
     <article class="card">
-      <h2>Modo Escuro com CSS</h2>
-      <p>Ajuste as sombras e desta
+      <div class="card-tag">Engenharia de Software</div>
+      <h2>Manipulação Avançada de Temas com CSS e JavaScript</h2>
+      <p class="author">Por <strong>Mariana Santos</strong> • 20 de Agosto, 2026</p>
+      <p class="excerpt">
+        A implementação do Modo Escuro deixou de ser um diferencial e virou um padrão na web moderna. Utilizando variáveis CSS (Custom Properties), conseguimos alternar a paleta completa da aplicação com pouquíssimas linhas de código.
+      </p>
+      <p class="excerpt">
+        Veja como salvar a preferência do usuário no <code>localStorage</code> do navegador para que a sua escolha de tema permaneça salva mesmo após recarregar a página.
+      </p>
+      <div class="card-footer">
+        <span class="read-time">⏱️ 6 min de leitura</span>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Meu Feed Dev - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
