@@ -1,27 +1,39 @@
-# 🚀 Desafio: Cards Interativos com Hover e Dark Mode
+# 🌟 Feed Interativo de Postagens — Desafio CSS & Dark Mode
 
-Este projeto é uma demonstração prática do uso de seletores CSS, efeitos de escala com `transform`, manipulação de sombras com `box-shadow` e suporte a **Modo Escuro (Dark Mode)**.
+Este projeto foi desenvolvido como parte de um desafio prático de Front-End para criar interfaces dinâmicas, modernas e responsivas utilizando **HTML5**, **CSS3** e **JavaScript vanilla**.
 
-## 🛠️ Tecnologias Utilizadas
+![Preview do Projeto](https://via.placeholder.com/800x400?text=Preview+do+Feed+Interativo) <!-- Substitua pela imagem real se desejar -->
 
-- **HTML5**: Estrutura semântica com a tag `<article>`.
-- **CSS3**: Transições, efeitos de hover, variáveis e `@media (prefers-color-scheme)`.
-- **JavaScript**: Alternância manual de tema claro/escuro via classe CSS.
+---
 
-## 🎯 Recursos Implementados
+## 🎯 Objetivos do Desafio
 
-1. **Efeito Hover nos Cards (`article:hover`)**:
-   - Aumento leve do tamanho do card com `transform: scale(1.02)`.
-   - Intensificação da sombra para criar efeito de elevação.
-   - Transição suave usando `transition`.
+- [x] Criar uma regra utilizando o seletor `:hover` para as tags `<article>`.
+- [x] Aplicar o efeito de escala leve (`transform: scale(1.02)`) ao passar o mouse.
+- [x] Intensificar o efeito de sombra (`box-shadow`) durante o `:hover`.
+- [x] Criar um **Modo Escuro (Dark Mode)** adaptável, utilizando sombras brilhantes em tons azuis/claros para manter o efeito de profundidade visual em fundos escuros.
+- [x] Garantir uma transição suave entre os estados via CSS.
 
-2. **Suporte a Dark Mode**:
-   - Ajuste automático conforme as preferências do sistema operacional.
-   - Suporte a alternância manual via botão.
-   - Sombra com brilho azulado (`rgba(0, 191, 255, 0.35)`) para destacar os cards em fundos escuros.
+---
 
-## 📂 Como Executar
+## 🚀 Tecnologias Utilizadas
 
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+- **HTML5**: Estrutura semântica utilizando `<header>`, `<main>`, `<section>`, `<article>` e `<footer>`.
+- **CSS3**:
+  - CSS Grid para layout responsivo.
+  - Variáveis CSS (`:root` e `body.dark`) para gerenciamento de temas.
+  - Propriedades de animação: `transition`, `transform` e `box-shadow`.
+  - Media Query `@media (prefers-color-scheme: dark)` para integração com as configurações do sistema operacional.
+- **JavaScript**:
+  - Alternância de classes no DOM.
+  - Persistência de tema com `localStorage`.
+
+---
+
+## 📂 Estrutura de Arquivos
+
+```text
+├── index.html   # Estrutura e conteúdo da página
+├── style.css    # Estilização, regras de hover e modo escuro
+├── script.js    # Lógica de alternância e persistência do tema
+└── README.md    # Documentação do projeto
