@@ -13,7 +13,7 @@ body.dark-mode {
   --card-bg: #121215;
   --accent-pink: #ff66b2;
   --shadow-color: rgba(255, 102, 178, 0.3);
-  --shadow-hover: rgba(0, 212, 255, 0.6); /* Sombra em tom azul neon brilhante para o modo escuro */
+  --shadow-hover: rgba(0, 212, 255, 0.6); /* Azul brilhante no modo escuro */
 }
 
 * {
@@ -67,16 +67,28 @@ h1 {
   padding: 0 1rem;
 }
 
-/* Regra principal do desafio */
+/* Regras do Card e Animação Fade-In */
 article.card {
   background-color: var(--card-bg);
   border: 1px solid rgba(255, 42, 133, 0.2);
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 12px var(--shadow-color);
+  
+  /* Transição para a interação do mouse */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Animação de entrada ao carregar */
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
 }
 
+/* Atraso em cascata para cada card */
+article.card:nth-child(1) { animation-delay: 0.1s; }
+article.card:nth-child(2) { animation-delay: 0.3s; }
+article.card:nth-child(3) { animation-delay: 0.5s; }
+
+/* Desafio :hover (escala + sombra intensa) */
 article.card:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 24px var(--shadow-hover);
@@ -90,4 +102,16 @@ article.card h2 {
 article.card p {
   line-height: 1.6;
   opacity: 0.9;
+}
+
+/* Keyframes da Animação Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
