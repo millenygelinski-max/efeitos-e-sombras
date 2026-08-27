@@ -1,55 +1,190 @@
-/* Configuração base dos cards de postagem */
-article {
-  /* Transição suave para o efeito de escala e sombra */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ==========================================================================
+   1. VARIÁVEIS E REINICIALIZAÇÃO (RESET)
+   ========================================================================== */
+:root {
+  --bg-primary: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --accent-color: #0d6efd;
+  --border-color: #e9ecef;
   
-  /* Sombra inicial no modo claro */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  
-  /* Estilização adicional do card */
-  border-radius: 8px;
-  background-color: #ffffff;
-  padding: 16px;
+  /* Sombras Modo Claro */
+  --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
-/* Efeito ao passar o mouse (:hover) no modo claro */
-article:hover {
-  /* Aumenta o tamanho do card em 2% */
+/* Variáveis para Tema Escuro */
+body.dark {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #38bdf8;
+  --border-color: #334155;
+  
+  /* Sombras Modo Escuro (Sombra com brilho azul vibrante) */
+  --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 8px 30px rgba(56, 189, 248, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA E LAYOUT
+   ========================================================================== */
+.header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-theme {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-card);
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 1rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero p {
+  color: var(--text-secondary);
+}
+
+/* Grid de Cards */
+.feed-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* ==========================================================================
+   3. DESAFIO: ESTILIZAÇÃO E HOVER DOS CARDS
+   ========================================================================== */
+article.card {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  padding: 1.75rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  /* Sombra inicial e transição suave */
+  box-shadow: var(--shadow-base);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+/* Regra principal do Desafio: Hover no Article */
+article.card:hover {
+  /* Aumento leve do tamanho (scale) */
   transform: scale(1.02);
   
-  /* Eleva a sombra, tornando-a mais intensa e expandida */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  /* Sombra intensificada / alterada conforme o tema */
+  box-shadow: var(--shadow-hover);
 }
 
-/* -------------------------------------------------- */
-/* Suporte ao Modo Escuro (Dark Mode)                 */
-/* -------------------------------------------------- */
+/* Detalhes internos do Card */
+.tag {
+  align-self: flex-start;
+  background-color: rgba(13, 110, 253, 0.1);
+  color: var(--accent-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
-/* Caso você utilize a preferência do sistema operacional */
+article.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+article.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.read-more {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+}
+
+/* Suporte à preferência do SO caso JavaScript esteja desativado */
 @media (prefers-color-scheme: dark) {
-  article {
-    background-color: #1e1e2e;
-    color: #f5f5f5;
-    /* Sombra suave no modo escuro */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  :root:not(.light-theme) {
+    --bg-primary: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8;
+    --border-color: #334155;
+    --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 8px 30px rgba(56, 189, 248, 0.35);
   }
-
-  article:hover {
-    transform: scale(1.02);
-    /* Sombra com brilho azulado para se destacar no fundo escuro */
-    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.35);
-  }
-}
-
-/* Caso você utilize uma classe CSS no body para alternar o tema (.dark) */
-body.dark article {
-  background-color: #1e1e2e;
-  color: #f5f5f5;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-body.dark article:hover {
-  transform: scale(1.02);
-  /* Sombra azul brilhante destacada */
-  box-shadow: 0 8px 25px rgba(0, 191, 255, 0.35);
 }
