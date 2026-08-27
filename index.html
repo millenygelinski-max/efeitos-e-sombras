@@ -3,32 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed de Postagens</title>
+  <title>Projeto Feed Interativo | Desafio CSS</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Meu Feed de Postagens</h1>
-    <button id="theme-toggle">Alternar Tema</button>
+  <header class="header">
+    <div class="header-container">
+      <h1>TechPosts</h1>
+      <button id="theme-toggle" class="btn-theme" aria-label="Alternar Tema">
+        <span class="icon">🌙</span> Alternar Tema
+      </button>
+    </div>
   </header>
 
-  <main class="feed">
-    <article>
-      <h2>Título da Postagem 1</h2>
-      <p>Este é um exemplo de cartão de postagem. Passe o mouse sobre ele para ver o efeito de zoom e a sombra personalizada!</p>
+  <section class="hero">
+    <h2>Explores as novidades em desenvolvimento web</h2>
+    <p>Passe o mouse sobre os cards para conferir as animações e sombras dinâmicas.</p>
+  </section>
+
+  <main class="feed-container">
+    <article class="card">
+      <span class="tag">CSS3</span>
+      <h2>Transformações e Transições</h2>
+      <p>Aprenda a aplicar <code>transform: scale(1.02)</code> de forma suave utilizando a propriedade <code>transition</code> nos seus elementos HTML.</p>
+      <footer class="card-footer">
+        <time datetime="2026-08-27">27 de Agosto, 2026</time>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </footer>
     </article>
 
-    <article>
-      <h2>Título da Postagem 2</h2>
-      <p>O efeito de transição suave torna a navegação muito mais agradável e profissional.</p>
+    <article class="card">
+      <span class="tag">Design</span>
+      <h2>Profundidade com Box-Shadow</h2>
+      <p>Descubra como sombras bem configuradas elevam o nível visual da interface e criam hierarquia de camadas sem poluir a tela.</p>
+      <footer class="card-footer">
+        <time datetime="2026-08-26">26 de Agosto, 2026</time>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </footer>
     </article>
 
-    <article>
-      <h2>Título da Postagem 3</h2>
-      <p>No modo escuro, a sombra ganha um tom azul brilhante para manter a profundidade visual.</p>
+    <article class="card">
+      <span class="tag font-highlight">Dark Mode</span>
+      <h2>Sombras no Modo Escuro</h2>
+      <p>Em fundos escuros, sombras pretas ficam invisíveis. Utilizar tons de azul ou cinza claro cria um brilho elegante e funcional.</p>
+      <footer class="card-footer">
+        <time datetime="2026-08-25">25 de Agosto, 2026</time>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </footer>
+    </article>
+
+    <article class="card">
+      <span class="tag">Acessibilidade</span>
+      <h2>Contraste e Usabilidade</h2>
+      <p>Manter um alto contraste nos modos claro e escuro garante que o conteúdo permaneça legível para todos os leitores.</p>
+      <footer class="card-footer">
+        <time datetime="2026-08-24">24 de Agosto, 2026</time>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </footer>
+    </article>
+
+    <article class="card">
+      <span class="tag">JavaScript</span>
+      <h2>Persistência com LocalStorage</h2>
+      <p>Salve a preferência do usuário no navegador para que o tema selecionado permaneça ativo nas próximas visitas.</p>
+      <footer class="card-footer">
+        <time datetime="2026-08-23">23 de Agosto, 2026</time>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </footer>
+    </article>
+
+    <article class="card">
+      <span class="tag">Boas Práticas</span>
+      <h2>Estrutura Semântica</h2>
+      <p>A tag <code>&lt;article&gt;</code> é ideal para envolver componentes independentes e reutilizáveis, como cartões de blog e posts.</p>
+      <footer class="card-footer">
+        <time datetime="2026-08-22">22 de Agosto, 2026</time>
+        <a href="#" class="read-more">Ler mais &rarr;</a>
+      </footer>
     </article>
   </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 TechPosts — Projeto desenvolvido para o Desafio CSS.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
