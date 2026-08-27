@@ -1,21 +1,9 @@
-# Feed de Cards Dinâmico com Hover e Dark Mode
+# ⚡ TechVibe Portal - Feed Dinâmico & Vibrante
 
-Este projeto apresenta uma interface responsiva de cards interativos com suporte a modo claro e modo escuro, aplicando efeitos de transição visual com CSS moderno.
+Projeto desenvolvido para demonstrar o uso avançado de **CSS3**, animações com `:hover`, suporte a **Modo Escuro com sombras bioluminescentes** e filtragem dinâmica via **JavaScript**.
 
-## 🚀 Funcionalidades
-
-- **Efeito `:hover` nos Cards**: Aumento suave de escala (`transform: scale(1.02)`) e intensificação da sombra (`box-shadow`).
-- **Modo Escuro**: Suporte a tema escuro usando variáveis CSS e alternância via JavaScript.
-- **Sombra Adaptativa**: No modo escuro, os cards recebem um brilho destacado para destacar o efeito de profundidade.
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5**: Estrutura semântica (`<article>`, `<main>`, `<header>`).
-- **CSS3**: Variáveis CSS, seletor `:hover`, `transform` e `box-shadow`.
-- **JavaScript**: Alternância simples de classes para o tema.
-
-## 📌 Como Executar
-
-1. Clone o repositório ou baixe os arquivos.
-2. Abra o arquivo `index.html` em qualquer navegador web.
-3. 
+## 🎯 Desafio Cumprido
+- **Aumento de Tamanho no Hover**: Aplicado `transform: scale(1.02)` com curva suave de transição (`cubic-bezier`).
+- **Sombra Intensificada**: Sombra expandida e rica em tom violeta no modo claro.
+- **Sombra bioluminescente no Modo Escuro**: Ajustada para tons brilhantes em Cyan e Purple (`rgba(6, 182, 212, 0.45)`), garantindo efeito de profundidade.
+- **Conteúdo Extenso**: Vários artigos completos com função para expandir/recolher texto.
