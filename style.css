@@ -1,190 +1,93 @@
-/* ==========================================================================
-   1. VARIÁVEIS E REINICIALIZAÇÃO (RESET)
-   ========================================================================== */
 :root {
-  --bg-primary: #f8f9fa;
-  --bg-card: #ffffff;
-  --text-primary: #212529;
-  --text-secondary: #6c757d;
-  --accent-color: #0d6efd;
-  --border-color: #e9ecef;
-  
-  /* Sombras Modo Claro */
-  --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.18);
+  --bg-color: #0f0f12;
+  --text-color: #f4f4f6;
+  --card-bg: #18181c;
+  --accent-pink: #ff2a85;
+  --shadow-color: rgba(255, 42, 133, 0.25);
+  --shadow-hover: rgba(255, 42, 133, 0.55);
 }
 
-/* Variáveis para Tema Escuro */
-body.dark {
-  --bg-primary: #0f172a;
-  --bg-card: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --accent-color: #38bdf8;
-  --border-color: #334155;
-  
-  /* Sombras Modo Escuro (Sombra com brilho azul vibrante) */
-  --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-hover: 0 8px 30px rgba(56, 189, 248, 0.35);
+body.dark-mode {
+  --bg-color: #050507;
+  --text-color: #ffffff;
+  --card-bg: #121215;
+  --accent-pink: #ff66b2;
+  --shadow-color: rgba(255, 102, 178, 0.3);
+  --shadow-hover: rgba(0, 212, 255, 0.6); /* Sombra em tom azul neon brilhante para o modo escuro */
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ==========================================================================
-   2. ESTRUTURA E LAYOUT
-   ========================================================================== */
-.header {
-  background-color: var(--bg-card);
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.btn-theme {
-  background: transparent;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-theme:hover {
-  background-color: var(--accent-color);
-  color: var(--bg-card);
-}
-
-.hero {
-  text-align: center;
-  padding: 3rem 1rem 1rem 1rem;
-  max-width: 800px;
+  padding: 2rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.hero p {
-  color: var(--text-secondary);
+h1 {
+  color: var(--accent-pink);
 }
 
-/* Grid de Cards */
-.feed-container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
+#theme-toggle {
+  background: var(--accent-pink);
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-/* ==========================================================================
-   3. DESAFIO: ESTILIZAÇÃO E HOVER DOS CARDS
-   ========================================================================== */
+/* Regra principal do desafio */
 article.card {
-  background-color: var(--bg-card);
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 42, 133, 0.2);
   border-radius: 12px;
-  padding: 1.75rem;
-  border: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
-  /* Sombra inicial e transição suave */
-  box-shadow: var(--shadow-base);
-  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
-              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-              background-color 0.3s ease,
-              border-color 0.3s ease;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Regra principal do Desafio: Hover no Article */
 article.card:hover {
-  /* Aumento leve do tamanho (scale) */
   transform: scale(1.02);
-  
-  /* Sombra intensificada / alterada conforme o tema */
-  box-shadow: var(--shadow-hover);
-}
-
-/* Detalhes internos do Card */
-.tag {
-  align-self: flex-start;
-  background-color: rgba(13, 110, 253, 0.1);
-  color: var(--accent-color);
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  box-shadow: 0 8px 24px var(--shadow-hover);
 }
 
 article.card h2 {
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
+  color: var(--accent-pink);
+  margin-bottom: 0.8rem;
 }
 
 article.card p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-}
-
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.85rem;
-  border-top: 1px solid var(--border-color);
-  padding-top: 1rem;
-}
-
-.read-more {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.main-footer {
-  text-align: center;
-  padding: 2rem;
-  color: var(--text-secondary);
-  border-top: 1px solid var(--border-color);
-  margin-top: 3rem;
-}
-
-/* Suporte à preferência do SO caso JavaScript esteja desativado */
-@media (prefers-color-scheme: dark) {
-  :root:not(.light-theme) {
-    --bg-primary: #0f172a;
-    --bg-card: #1e293b;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --accent-color: #38bdf8;
-    --border-color: #334155;
-    --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.5);
-    --shadow-hover: 0 8px 30px rgba(56, 189, 248, 0.35);
-  }
+  line-height: 1.6;
+  opacity: 0.9;
 }
