@@ -1,4 +1,4 @@
-# Feed Interativo em Rosa & Preto 💖🖤
+# Feed Interativo 
 
 Este projeto é uma demonstração prática de interatividade visual com CSS3 e JavaScript Vanilla, destacando animações de entrada e efeitos dinâmicos no foco do usuário.
 
