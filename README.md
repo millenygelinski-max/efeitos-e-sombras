@@ -1,16 +1,16 @@
 # Feed Interativo em Rosa & Preto 💖🖤
 
-Este projeto é uma demonstração prática de interatividade visual com CSS e JavaScript, focando em efeitos de `:hover` e alternância de temas.
+Este projeto é uma demonstração prática de interatividade visual com CSS3 e JavaScript Vanilla, destacando animações de entrada e efeitos dinâmicos no foco do usuário.
 
 ## 🚀 Funcionalidades
 
-- **Efeito Hover nos Cards:** Os elementos `<article>` aumentam levemente de tamanho (`transform: scale(1.02)`) ao passar o mouse.
-- **Sombras Dinâmicas:** A sombra (`box-shadow`) ganha intensidade na interação.
-- **Modo Escuro com Destaque Neon:** No modo escuro, a sombra do card se transforma em um tom azul brilhante para manter a profundidade em superfícies escuras.
-- **Paleta de Cores:** Design moderno em tons de rosa e preto.
+- **Animação Fade-In:** Entrada gradual e suave dos cartões de postagem ao carregar a página.
+- **Efeito :hover nos Cards:** Aumento leve de tamanho (`transform: scale(1.02)`) e intensificação da sombra ao passar o mouse.
+- **Sombras Adaptativas (Modo Escuro):** Alternância para uma sombra tom azul brilhante no tema escuro para ressaltar a profundidade no fundo escuro.
+- **Design Rosa e Preto:** Estilização moderna utilizando Variáveis CSS.
 
 ## 🛠️ Tecnologias Utilizadas
 
 - HTML5
-- CSS3 (Variáveis CSS, Flexbox, CSS Grid)
-- JavaScript Vanilla
+- CSS3 (Keyframes, CSS Grid, Variáveis CSS)
+- JavaScript
