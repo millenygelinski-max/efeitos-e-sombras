@@ -3,141 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal TechVibe - Feed Interativo & Dinâmico</title>
+  <title>Feed de Postagens</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body class="light-mode">
-  
-  <header class="main-header">
-    <div class="logo-container">
-      <span class="logo-icon">⚡</span>
-      <h1 class="logo-text">Tech<span class="highlight">Vibe</span></h1>
-    </div>
-    <p class="tagline">Explorando as fronteiras da inovação, design e tecnologia do amanhã.</p>
-    <div class="header-actions">
-      <button id="theme-toggle" class="theme-btn">
-        <span class="btn-icon">🌙</span> Alternar Modo
-      </button>
-    </div>
+<body>
+
+  <header>
+    <h1>Meu Feed de Postagens</h1>
+    <button id="theme-toggle">Alternar Tema</button>
   </header>
 
-  <nav class="filter-bar">
-    <button class="filter-btn active" data-filter="all">Todos os Artigos</button>
-    <button class="filter-btn" data-filter="frontend">Front-End</button>
-    <button class="filter-btn" data-filter="ai">Inteligência Artificial</button>
-    <button class="filter-btn" data-filter="design">UI/UX Design</button>
-  </nav>
-
-  <main class="feed-container">
-
-    <article class="card vibrant-card-1" data-category="frontend">
-      <div class="card-badge">Front-End & CSS3</div>
-      <div class="card-header">
-        <span class="read-time">📖 5 min de leitura</span>
-        <span class="card-date">27 Ago 2026</span>
-      </div>
-      <h2>A Revolução do CSS Moderno: Animações, Microinterações e Variáveis Avançadas</h2>
-      <p class="card-excerpt">
-        O CSS deixou de ser uma simples linguagem de estilização para se tornar um ecossistema robusto de animação e layout. Com seletores modernos como <code>:has()</code>, variáveis CSS dinâmicas e transformações de alto desempenho em hardware, os desenvolvedores conseguem criar experiências visuais incrivelmente ricas sem comprometer a performance do navegador.
-      </p>
-      <div class="card-details">
-        <p>Aprenda a aplicar gradientes neon multidimensionais, filtros de desfoque de fundo (backdrop-filter) e dinâmicas de transição inteligentes para manter os utilizadores engajados e impressionados em cada clique.</p>
-      </div>
-      <div class="card-footer">
-        <div class="author-info">
-          <span class="avatar">🚀</span>
-          <div>
-            <strong>Lucas Silveira</strong>
-            <small>Senior CSS Architect</small>
-          </div>
-        </div>
-        <button class="read-more-btn">Ler mais →</button>
-      </div>
+  <main class="feed">
+    <article>
+      <h2>Título da Postagem 1</h2>
+      <p>Este é um exemplo de cartão de postagem. Passe o mouse sobre ele para ver o efeito de zoom e a sombra personalizada!</p>
     </article>
 
-    <article class="card vibrant-card-2" data-category="ai">
-      <div class="card-badge">Inteligência Artificial</div>
-      <div class="card-header">
-        <span class="read-time">📖 8 min de leitura</span>
-        <span class="card-date">26 Ago 2026</span>
-      </div>
-      <h2>Engenharia de Prompt e Modelos Multimodais: O Futuro da Criação Digital</h2>
-      <p class="card-excerpt">
-        A inteligência artificial generativa transformou radicalmente o fluxo de trabalho de designers, programadores e criadores de conteúdo. Compreender a arquitetura de modelos multimodais permite integrar respostas textuais, geração de imagens vetoriais e análise de dados em tempo real dentro da própria aplicação web.
-      </p>
-      <div class="card-details">
-        <p>Descubra como otimizar agentes autônomos, estruturar contextos complexos e aproveitar pipelines de inferência ultrarrápidos para criar sistemas verdadeiramente inteligentes e intuitivos.</p>
-      </div>
-      <div class="card-footer">
-        <div class="author-info">
-          <span class="avatar">🤖</span>
-          <div>
-            <strong>Ana Beatriz Maya</strong>
-            <small>AI Research Lead</small>
-          </div>
-        </div>
-        <button class="read-more-btn">Ler mais →</button>
-      </div>
+    <article>
+      <h2>Título da Postagem 2</h2>
+      <p>O efeito de transição suave torna a navegação muito mais agradável e profissional.</p>
     </article>
 
-    <article class="card vibrant-card-3" data-category="design">
-      <div class="card-badge">UI/UX Design</div>
-      <div class="card-header">
-        <span class="read-time">📖 6 min de leitura</span>
-        <span class="card-date">25 Ago 2026</span>
-      </div>
-      <h2>Design de Sistemas Neon & Dark Mode: Psicologia das Cores e Profundidade</h2>
-      <p class="card-excerpt">
-        Projetar interfaces para o Modo Escuro exige muito mais do que inverter o fundo para preto. É preciso dominar a hierarquia visual, o contraste acessível e o uso estratégico de sombras bioluminescentes para criar profundidade e guiagem visual sem causar fadiga ocular no utilizador.
-      </p>
-      <div class="card-details">
-        <p>Aprenda a aplicar paletas de cores hiper-saturadas sobre fundos de contraste profundo, utilizando transparências calculadas em RGBA/HSLA para dar às superfícies o aspeto de vidro flutuante (Glassmorphism).</p>
-      </div>
-      <div class="card-footer">
-        <div class="author-info">
-          <span class="avatar">🎨</span>
-          <div>
-            <strong>Gabriel Costa</strong>
-            <small>Principal Product Designer</small>
-          </div>
-        </div>
-        <button class="read-more-btn">Ler mais →</button>
-      </div>
+    <article>
+      <h2>Título da Postagem 3</h2>
+      <p>No modo escuro, a sombra ganha um tom azul brilhante para manter a profundidade visual.</p>
     </article>
-
-    <article class="card vibrant-card-4" data-category="frontend">
-      <div class="card-badge">Engenharia Web</div>
-      <div class="card-header">
-        <span class="read-time">📖 7 min de leitura</span>
-        <span class="card-date">24 Ago 2026</span>
-      </div>
-      <h2>Otimização Extrema de Performance: Animações a 60FPS no Navegador</h2>
-      <p class="card-excerpt">
-        Para alcançar transições fluidas a 60 quadros por segundo, o motor de renderização do navegador necessita de executar transformações apenas na camada de composição. Entender o comportamento de propriedades como <code>transform</code> e <code>opacity</code> é fundamental para evitar recomputações custosas de layout.
-      </p>
-      <div class="card-details">
-        <p>Exploramos estratégias de aceleração por GPU, uso otimizado do seletor <code>:hover</code> e técnicas de carregamento assíncrono para garantir carregamentos instantâneos até em conexões lentas.</p>
-      </div>
-      <div class="card-footer">
-        <div class="author-info">
-          <span class="avatar">⚡</span>
-          <div>
-            <strong>Mariana Santos</strong>
-            <small>Web Performance Specialist</small>
-          </div>
-        </div>
-        <button class="read-more-btn">Ler mais →</button>
-      </div>
-    </article>
-
   </main>
-
-  <footer class="main-footer">
-    <p>© 2026 TechVibe Portal. Projeto desenvolvido com HTML5, CSS3 Dinâmico & JavaScript Vanilla.</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
